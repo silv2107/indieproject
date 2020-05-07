@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./css/layout.css">
+    <title>The effect of exercise on the immune response during a virus infection</title>    
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+            <article class="burger-box" id="burger-box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </article>
+            <h1><a href="./forside.html">Exercise and the Immune System</a></h1>
+        </header>
+        <nav>
+            <a href="./MI.html">Moderate and intense exercise</a>
+            <a href="./immuneResponse.html">The immune response</a>
+            <a href="./exerciseImmunity.html">Exercise and viral infection</a>
+        </nav>
+        <main class="bigContainer">
+            <figure class="graphContainer1" style="min-width: 300px; max-width: 600px; height: 60vh;">
+                <canvas id="recoveryRate"></canvas>
+                <figcaption>graph1. There is a smooth transition between the two phases of virus defence, virus clearence (blue) and antibody production (green), in regards to moderate exercise, which leads to a fast recovery.  No exercise individuals have a longer period of time within the first phase, virus clearence (blue), and also a longer duration of illness. Intensive training during a viral infection automatically blocks the first phase and skips into second phase (antibody production). Thus, illness persists for a much longer period.</figcaption>
+            </figure>
+            <figure class="graphContainer2" style="min-width: 300px; max-width: 600px; height: 60vh;">
+                <canvas id="survivalRate"></canvas>
+                <figcaption>graph2. Patients who practiced moderate exercise during the first days of a virus lung infection have 80% survivial rate. Numbers are 40% and 25% for sedantary individuals and individuals who practiced intensive exercise, respectively.</figcaption>
+            </figure>
+            <section class="conclusion">
+                <p>Moderate exercise in the beginning of a virus infection creates the optimal immune response to fight of the infection and to create the proper immunity. This due to the smooth transition between the two phases of the immune response (i.e. virus clearence and antibody production). The smooth transition between the phases seen after moderate exercise insures the least damage to the lung cells by blocking the killer cells from excessive damage to the cells, while at the same time producing antibodies against further external virus infection. Intensive training after virus infection creates the worst condition for a proper immune response. Thus, the first phase, virus clearence, of defence is omited and the body enter directly into second phase. Consequently, the virus can spread unchecked. No training after virus infection has the tendency for an imbalance between the phase, towards the first phase (virus clearence). Thus, the tendency towards prolonged illness is higher.</p>
+            </section>
+        </main>
+    </section>
+    <script src="./js/header.js"></script>
+    <script src="./js/exerciseImmunity.js"></script>    
+</body>
+</html>

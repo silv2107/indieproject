@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: 'Trebuchet MS', 'Gill Sons', 'monospace';
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+
+/* -----------header--------------------------------------- */
+header{
+    width: 100%;
+    background: linear-gradient(0.25turn, #B5B4D9,#D9CEAD,rgb(191, 65, 65),#D9CEAD, #B5B4D9);
+    /* background-color: rgba(181, 180, 217, 0.267); */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 130px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template: 1fr 1fr / 10px 60px 1fr 200px 1fr;
+}
+
+h1{
+    grid-area: 1 / 4 / 2 / span 1; 
+    margin-top: 30px;
+}
+
+h1 a{
+    color: black;
+    text-decoration: none; 
+}
+
+.burger-box {
+    cursor: pointer;
+    grid-area: 1 / 2 / 2 / 3;
+    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+    /* border: 1px white solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-box span {
+    height: 20%;
+    background-color: black;
+}
+
+nav {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(0.25turn, #B5B4D9,#D9CEAD,rgba(191, 65, 65, 0.842),#D9CEAD, #B5B4D9);;
+    position: fixed;
+    width: 100%;
+    background-color:white;
+    display: none;
+    flex-direction: column;
+
+}
+
+.visible {
+    display: flex;
+}
+
+nav a {
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+}
+
+
+/* -------------main forside------------------------------------------- */
+
+
+.hero{
+    background: linear-gradient(0.25turn,rgb(191, 65, 65), #D9CEAD, #D9CEAD, rgb(191, 65, 65));
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr minmax(200px, 400px) 1fr 1fr;;
+    grid-template-rows: 1fr 1fr minmax(200px, 400px) 1fr 1fr;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    grid-area: 3 / 3 / 4 / 4;
+    
+}
+
+
+
+/* ----------------------main MI----------------------------------------------- */
+
+
+.exercise {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#B5B4D9, #D9CEAD, rgb(191, 65, 65));
+    display: grid;
+    /* grid-template: 70px 45% 45% / 1fr minmax(200px, 400px) 1fr; */
+    grid-template: 70px auto auto / 1fr minmax(200px, 400px) 1fr;
+    grid-gap: 15px;
+}
+
+.exercise h1{
+    font-size: 2.5rem;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.moderate {
+    display: grid;
+    justify-self: center;
+    grid-template: auto auto / 100%;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* .moderate {
+    display: grid;
+    justify-self: center;
+    grid-template: 180px 180px / 100%;
+    grid-area: 2 / 2 / 3 / 3;
+} */
+.moderate .icon-section {
+    border-bottom: 2px solid grey;
+}
+
+.intensive {
+    padding-top: 20px;
+    display: grid;
+    justify-self: center;
+    grid-template: auto auto / 100%;
+    grid-area: 3 / 2 / 4 / 3; 
+}
+
+/* .intensive {
+    padding-top: 20px;
+    display: grid;
+    justify-self: center;
+    grid-template: 180px 180px / 100%;
+    grid-area: 3 / 2 / 4 / 3; 
+} */
+
+.intensive .text-section {
+    padding-top: 10px;
+    border-top: 2px solid grey;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 1;
+}
+
+.text-section h4 {
+    padding-bottom: 10px;
+}
+
+.text-section ul {
+    list-style-type: none;
+}
+
+.icon-section {
+    padding: 5vh;
+    grid-area: 2 / 1 / 3 / 1;  
+    display: grid; 
+    grid-template: auto auto / 10vw 10vw 10vw;
+    grid-gap: 0px 25px;   
+    justify-content: space-evenly;
+}
+
+.walk {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.text-walk {
+    justify-self: center;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+
+.bike {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.text-bike {
+    justify-self: center;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.tennis{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.text-tennis {
+    justify-self: center;
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+/* .icon-section {
+    grid-area: 2 / 1 / 3 / 1;  
+    display: grid; 
+    grid-template: 10px 80px 80px 80px 10px / 10px 80px 80px 80px 10px;
+    grid-gap: 10px 25px;   
+} */
+
+/* first pair */
+/* .walk {
+    grid-area: 2 / 2 / 3 / 3;
+} */
+
+/* .text-walk {
+    justify-self: center;
+    grid-area: 3 / 2 / 4 / 3;
+} */
+/* ----------------------------- */
+
+/* second pair */
+/* .bike {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.text-bike {
+    justify-self: center;
+    grid-area: 3 / 3 / 4 / 4;
+} */
+/* ------------------------------- */
+
+
+/* third par */
+/* .tennis{
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.text-tennis {
+    justify-self: center;
+    grid-area: 3 / 4 / 4 / 5;
+} */
+/* ------------------------------- */
+/* ------end of moderate part------------ */
+/* ---------start of intensive part */
+
+/* -----first pair-------------- */
+.run {
+    /* grid-area: 2 / 2 / 3 / 3;     */
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.text-run {
+    /* justify-self: center;
+    grid-area: 3 / 2 / 4 / 3; */
+    justify-self: center;
+    grid-area: 2 / 1 / 3 / 2;
+}
+/* -------------------------------- */
+
+/* second pair */
+.fastBike {
+    /* grid-area: 2 / 3 / 3 / 4; */
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.text-fastBike {
+    /* justify-self: center;
+    grid-area: 3 / 3 / 4 / 4; */
+    justify-self: center;
+    grid-area: 2 / 2 / 3 / 3;
+}
+/* ------------------------------- */
+
+/* third par */
+.singleTennis{
+    /* grid-area: 2 / 4 / 3 / 5; */
+    grid-area: 1 / 3 / 2 / 4;
+
+}
+
+.text-singleTennis {
+    /* justify-self: center;
+    grid-area: 3 / 4 / 4 / 5; */
+    justify-self: center;
+    grid-area: 2 / 3 / 3 / 4;
+}
+/* --------------------------------- */
+
+
+/* media quary is used to change moderate and intensive layout on desktop version */
+@media (min-width: 700px) {
+    /* -----------frontpage media query----------------- */
+    .hero {
+        background-image: url(../img/background12.jpg);
+        grid-template-columns: 1fr 1fr 650px 1fr 1fr;;
+        grid-template-rows: 1fr 1fr 450px 1fr 1fr;
+    }
+
+    .hero img {
+        box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.5);
+        border: 50px solid  rgba(181, 180, 217, 0.233); 
+    }
+}
+    /* ---------------------------------------------------- */
+
+    /* ---------------MI page------------------------------- */
+@media (min-width: 900px) {
+    .exercise {
+        background: linear-gradient(0.25turn,#B5B4D9, #D9CEAD, #D9CEAD, rgb(191, 65, 65), rgb(191, 65, 65));
+        display: grid;
+        grid-template: 10vh 90vh / 40% 20% 40%;
+    }
+    /* .exercise {
+        background: linear-gradient(0.25turn,#B5B4D9, #D9CEAD, #D9CEAD, rgb(191, 65, 65), rgb(191, 65, 65));
+        display: grid;
+        grid-template: 1fr 100px 66vh / 1fr  400px 1fr 400px 1fr;
+    } */
+
+    .exercise h1 {
+        font-size: 3rem;
+        grid-area: 1 / 2 / 2 / 3;  
+    }
+
+    /* .exercise h1 {
+        font-size: 3rem;
+        grid-area: 2 / 2 / 3 / span 3;  
+    } */
+
+    /* .moderate {
+        grid-area: 3 / 2 / 4 / 3;
+    } */
+
+    .moderate {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .moderate h3 {
+        font-size: 2rem;
+    }
+
+    /* .intensive {
+        grid-area: 3 / 4 / 4 / 5; 
+    } */
+
+    .intensive {
+        grid-area: 2 / 3 / 3 / 4; 
+    }
+
+    .intensive h3 {
+        font-size: 2rem;
+    }
+
+    .moderate .icon-section {
+        border-bottom: none;
+    }
+
+    .intensive {
+        padding-top: 0px;
+    }
+
+    .intensive .text-section {
+        padding-top: 0px;
+        border-top: none;
+    }    
+
+    .icon-section {
+        padding-top: 40px;
+
+    }
+}
+
+
+
+/*--------------immune response page-------------- */
+
+/*--------------------------first animation - virus infection---------------- */
+
+
+.immuneResponse {
+    background-color: white;
+    height: 100vh;
+    max-width: 600px;
+    min-width: 200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(9, auto)  / 100%;
+    grid-gap: 5vh;  
+}
+
+.immuneResponse p {
+    padding: 0px 40px 0px 40px;
+}
+
+.immuneResponse h2 {
+    padding: 0px 10px 0px 10px;
+}
+
+/*------------- infection-------------------- */
+/* .animationInfection {
+    background: linear-gradient(0.25turn, rgba(181, 180, 217, 0.639),rgba(217, 206, 173, 0.714), rgba(181, 180, 217, 0.639));
+    height: 20vh;
+    position: relative;
+}
+
+.animationInfection::before {
+    content: "";
+    opacity: .1; 
+    z-index: 1; 
+    position: absolute; 
+    left: 0; 
+    top: 0;  
+    width: 100%; 
+    height: 100%; 
+    background-image: url(../img/virusCell.png); 
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    animation: virus 15s ease-in-out infinite;  
+    
+} */
+
+.animationInfection {
+    height: 33vh;
+    background-image: url(../img/virusCell.png); 
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    animation: virus 15s ease-in-out infinite;  
+    
+}
+
+@keyframes virus {
+    0% { background-image:  url(../img/virusCell.png);}
+    20% { background-image: url(../img/virusInfectedCells.png);}
+    40% {background-image: url(../img/virusReplication.png);}
+    60% {background-image:  url(../img/cellsDestroyed.png);}
+    80% {background-image: url(../img/virusAttackNewCells.png);}
+    100% {background-image: url(../img/empty.png);}
+}
+
+
+
+
+/* --------------------------------------------------------------- */
+
+/* -----------------------virus clearence - second animation--------------------------- */
+.virusClearence {
+    height: 20vh;
+    width: 260px;
+    display: grid;
+    grid-template: 100% / 130px 130px;
+    justify-self: center;
+    /* align-self: center; */
+}
+
+.left {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.virusKillerCell{
+    border-radius: 50%;
+    background-color: blue;
+    margin: 8px;
+    height: 30px;
+    width: 30px;
+    border: red solid 1px;
+    animation:killingVirusCell 5s ease-out 2s infinite alternate;
+}
+
+@keyframes killingVirusCell {
+    100% {transform: translateX(100px);}
+}
+
+.right {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.infectedCell {
+    margin: 8px;
+    height: 30px;
+    width: 30px;
+    border: red solid 2px;
+    border-radius: 50%;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    justify-content: center;
+    animation: killingInfectedCells 5s ease-out 5s infinite alternate;
+    animation-fill-mode: both;
+}
+
+@keyframes killingInfectedCells {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+.theVirus1 {
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    background-color: black;
+    grid-area: 2 / 1 / 3 / 2; 
+}
+
+.theVirus2 {
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    background-color: black;
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.theVirus3 {
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    background-color: black;
+    grid-area: 2 / 3 / 3 / 4; 
+}
+
+/* ------antibody production--------------- */
+
+.antibodyProduction{
+    height: 20vh;
+    width: 260px;
+    display: grid;
+    grid-template: 100% / 90px 90px 90px;
+    justify-self: center;
+    /* align-self: center; */
+}
+
+.leftAntibody {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.antiBody {
+    border-radius: 50%;
+    border: 1px black solid;
+    background-color: green;
+    margin: 8px;
+    height: 30px;
+    width: 30px;
+    animation: stopKillingCells 3s ease-in-out 2s 1;
+    animation-fill-mode: both;
+}
+
+@keyframes stopKillingCells {
+    100% {transform: translateX(60px);}
+}
+
+.theBody{
+    font-size: 0.9em;
+    visibility: hidden;
+    animation: antibody 3s ease-in 8s infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes antibody {
+    0% {visibility: hidden;}
+    50% {visibility: visible;}
+    100% {visibility: visible; transform: translate(120px);}
+}
+
+.rightAntibody {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.killerCell {
+    border-radius: 50%;
+    border: 1px red solid;
+    background-color: blue;
+    margin: 8px;
+    height: 30px;
+    width: 30px;
+    animation:stoppingVirusCell 10s ease-in-out 1;  
+    animation-fill-mode: both;  
+}
+
+@keyframes stoppingVirusCell {
+    0% {transform: translateX(60px);}
+    100% {opacity: 20%}
+}
+
+/*-------------------- immuneResponse media query --------------*/
+
+@media (min-width: 600px) {
+    html, body {
+        background: linear-gradient(0.25turn, #B5B4D9,#D9CEAD, rgba(181, 180, 217, 0.639));
+    }
+
+    .immuneResponse {
+        height: 100vh;
+        max-width: 100vw;
+        min-width: 600px; 
+        margin: 0 auto;
+        display: grid;
+        grid-template: repeat(6, auto) / 60% 40%;
+        grid-gap: 10px 0px;
+    }
+
+    h2 {
+        align-self: end;
+        font-size: 1.7em;
+    }
+
+
+    p {
+        font-size: 1.2em;
+        align-self: start;
+        padding-bottom: 5vh;
+    }
+
+    .animationInfection {
+        height: 45vh;
+        align-self: start;
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    .virusClearence {
+        justify-self: center;
+        align-self: center;
+        grid-area: 3 / 2 / 5 / 3;
+    }
+
+    .antibodyProduction {
+        padding-bottom: 5vh;
+        justify-self: center;
+        align-self: center;
+        grid-area: 5 / 2 / 7 / 3;
+    }
+}
+
+/* ------------------- main exerciseImmunity------------------ */
+.bigContainer{
+    background: linear-gradient(0.25turn, rgba(181, 180, 217, 0.639),rgba(217, 206, 173, 0.714), rgba(181, 180, 217, 0.639));
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.graphContainer1{
+    flex: 1;
+    margin: auto;
+    padding-bottom: 5vh;
+}
+
+.graphContainer2{
+    flex: 1;
+    margin: auto;
+}
+
+.conclusion {
+    flex: 1;
+    padding-top:5vh;
+}
+
+.conclusion p {
+    
+    letter-spacing: 1.2px;
+    padding: 0 10px 30px 10px;
+    margin: auto;
+    /* text-align: center; */
+    min-width: 300px;
+    max-width: 1100px;
+}
+
+figcaption {
+    margin: auto;
+    font-size: 0.8em;
+}
+/* ------------------------------------------------------ */
+
+
+/*-------------------- exerciseImmunity media query --------------*/
+
+@media (min-width: 1300px) {
+    .bigContainer{
+        height: 100%;
+        display: grid;
+        grid-template: 80% 20% / 50% 50%;
+    }
+    
+    .graphContainer1{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .graphContainer2 {
+        grid-area: 1 /2 / 2 / 3;
+    }
+
+    .conclusion{
+        align-self: center;
+        max-width: 100vw;
+        grid-area: 2 / 1 / 3 / 3;
+        padding-top: 10vh;
+        margin-left: 2vw;
+    }
+
+    .conclusion h2 {
+        margin: auto;
+    }
+}
